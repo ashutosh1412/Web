@@ -55,6 +55,7 @@ function sendMessage() {
 		    console.log(this.getAllResponseHeaders());
 		  }
 		};
+<<<<<<< HEAD
 }
 function getData(data)
 {
@@ -81,4 +82,6 @@ function display(list)
 	for(i=0;i<list.length;i++){
 		div.innerHTML = "table";
 	}
+=======
+>>>>>>> 51f9fe8beed2eff9870235f4fc0e98a0bcdbe7bb
 }

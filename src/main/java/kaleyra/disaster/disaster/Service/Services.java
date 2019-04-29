@@ -1,12 +1,18 @@
 package kaleyra.disaster.disaster.Service;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+>>>>>>> 51f9fe8beed2eff9870235f4fc0e98a0bcdbe7bb
 import java.util.HashMap;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 import antlr.collections.List;
+=======
+>>>>>>> 51f9fe8beed2eff9870235f4fc0e98a0bcdbe7bb
 import kaleyra.disaster.disaster.DatabaseModel.CallDB;
 import kaleyra.disaster.disaster.DatabaseModel.MessageDB;
 import kaleyra.disaster.disaster.DatabaseModel.UserDB;
@@ -67,6 +73,7 @@ public class Services implements IServices {
 	}
 
 	@Override
+<<<<<<< HEAD
 	public Call call(Call call) {
 		Call validator = validation.call(call);
 		if (validator.getName().equals("Empty") || validator.getLocation().equals("Empty")) {
@@ -129,6 +136,22 @@ public class Services implements IServices {
 			}
 			return response;
 		}
+=======
+	public HashMap<String, String> call(Call call) {
+		//HashMap<String, String> validator = validation.call(call);
+		CallDB dbcall = new CallDB();
+		BeanUtils.copyProperties(call, dbcall);
+		callRepository.save(dbcall);
+		return null;
+	}
+
+	@Override
+	public HashMap<String, String> regstration(User user) {
+		//HashMap<String, String> validator = validation.user(user);
+		UserDB dbuser = new UserDB();
+		BeanUtils.copyProperties(user, dbuser);
+		userRepository.save(dbuser);
+>>>>>>> 51f9fe8beed2eff9870235f4fc0e98a0bcdbe7bb
 		return null;
 	}
 }
